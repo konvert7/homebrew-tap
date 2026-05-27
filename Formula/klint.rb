@@ -20,7 +20,7 @@ class Klint < Formula
   end
 
   def install
-    binary = Dir["klint-*/klint"].first
+    binary = File.exist?("klint") ? "klint" : Dir["klint-*/klint"].first
     odie "klint binary not found" unless binary
     bin.install binary => "klint"
   end
