@@ -4,15 +4,15 @@
 class Klint < Formula
   desc "Architecture-as-Code linter for TypeScript, Python, and Swift projects"
   homepage "https://github.com/konvert7/klint"
-  version "0.35.2"
+  version "0.36.0"
   license "MIT"
 
   if Hardware::CPU.arm?
-    url "https://github.com/konvert7/klint/releases/download/v0.35.2/klint-0.35.2-darwin-arm64.tar.gz"
-    sha256 "4e0546c6f74080f945753a24bd7415d5c06b823006503e1051a2743853dd58ae"
+    url "https://github.com/konvert7/klint/releases/download/v0.36.0/klint-0.36.0-darwin-arm64.tar.gz"
+    sha256 "6dd33d41f4a90da846710c0f7b7ac687a2b27377bef6b6126dc798acce7f2e51"
   else
-    url "https://github.com/konvert7/klint/releases/download/v0.35.2/klint-0.35.2-darwin-x64.tar.gz"
-    sha256 "2b83c496a250d435d3b393138413d783aa2bbe3f512d220fa567a64dfc785e7e"
+    url "https://github.com/konvert7/klint/releases/download/v0.36.0/klint-0.36.0-darwin-x64.tar.gz"
+    sha256 "825c20cea13c6860956f71a35a9f43058b92ea5db9f30168966e441b83446271"
   end
 
   def install
