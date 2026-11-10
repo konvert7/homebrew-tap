@@ -2,17 +2,23 @@
 # frozen_string_literal: true
 
 class Klint < Formula
-  desc "Architecture-as-Code linter for TypeScript, Python, and Swift projects"
+  desc "Architecture-as-Code linter: layer boundaries, imports and forbidden patterns"
   homepage "https://github.com/konvert7/klint"
-  version "0.38.0"
+  version "1.0.2"
   license "MIT"
 
-  if Hardware::CPU.arm?
-    url "https://github.com/konvert7/klint/releases/download/v0.38.0/klint-0.38.0-darwin-arm64.tar.gz"
-    sha256 "f18a11c6aba8b36d5ce46fa1f5da8941359967bb6fcdb765c0f91daa75fbd9c4"
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/konvert7/klint/releases/download/v1.0.2/klint-1.0.2-darwin-arm64.tar.gz"
+    sha256 "aa7a7eb7cfe8a4c764d58884585127c0626e41fc066b93cb182a41fb8b5839a8"
+  elsif OS.mac?
+    url "https://github.com/konvert7/klint/releases/download/v1.0.2/klint-1.0.2-darwin-x64.tar.gz"
+    sha256 "a5eda2ca822f207293f15b8f7fde471d5e1b2caaa919d0d179de99be1ff50759"
+  elsif Hardware::CPU.arm?
+    url "https://github.com/konvert7/klint/releases/download/v1.0.2/klint-1.0.2-linux-arm64.tar.gz"
+    sha256 "d40960ab91436d364f6437afdbf148e03a932ca5f13376ba34d842e030db8c46"
   else
-    url "https://github.com/konvert7/klint/releases/download/v0.38.0/klint-0.38.0-darwin-x64.tar.gz"
-    sha256 "c5243a4e7bb0dacf9203bd5370cc23688e4974d79ce3f9aa6b19cb3ebf511b04"
+    url "https://github.com/konvert7/klint/releases/download/v1.0.2/klint-1.0.2-linux-x64.tar.gz"
+    sha256 "b8cca8012438f731f3814ba3e15f38203e3d7280c2a5135debddf91eac699ec6"
   end
 
   def install
@@ -22,6 +28,6 @@ class Klint < Formula
   end
 
   test do
-    assert_match "klint-rs", shell_output("#{bin}/klint --version")
+    assert_match version.to_s, shell_output("#{bin}/klint --version")
   end
 end
