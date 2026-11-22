@@ -4,21 +4,21 @@
 class Klint < Formula
   desc "Architecture-as-Code linter: layer boundaries, imports and forbidden patterns"
   homepage "https://klint.dev"
-  version "1.12.0"
+  version "1.13.0"
   license "MIT"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/konvert7/klint/releases/download/v1.12.0/klint-1.12.0-darwin-arm64.tar.gz"
-    sha256 "2999b56a03c82c2eea9f8d9524521401b2d0f9e62d0e79db6016cb240deeab0e"
+    url "https://github.com/konvert7/klint/releases/download/v1.13.0/klint-1.13.0-darwin-arm64.tar.gz"
+    sha256 "7de16287e7956d00c9663141fe9784648a495e63022de12321f3ac0244499f80"
   elsif OS.mac?
-    url "https://github.com/konvert7/klint/releases/download/v1.12.0/klint-1.12.0-darwin-x64.tar.gz"
-    sha256 "e42c618032aabc26eb61ce66e3ba0ebf68091bfcdc0c4f3a4e1d5bb4646e0e5e"
+    url "https://github.com/konvert7/klint/releases/download/v1.13.0/klint-1.13.0-darwin-x64.tar.gz"
+    sha256 "ce444122adc8f633a6b0c29c0e28c9e7f498b235c1ff72154bde59166bd6b75a"
   elsif Hardware::CPU.arm?
-    url "https://github.com/konvert7/klint/releases/download/v1.12.0/klint-1.12.0-linux-arm64.tar.gz"
-    sha256 "b02ff95c6ef11ccfbc401211fe994638a4a99760b66a4002f4638401372c0f6b"
+    url "https://github.com/konvert7/klint/releases/download/v1.13.0/klint-1.13.0-linux-arm64.tar.gz"
+    sha256 "0c490948498854d7c872757e10f01628e53623d1b686c421720d474510577772"
   else
-    url "https://github.com/konvert7/klint/releases/download/v1.12.0/klint-1.12.0-linux-x64.tar.gz"
-    sha256 "13d41657e972870621964e30e4597528321c403c4954fd51eac0efcc43583d88"
+    url "https://github.com/konvert7/klint/releases/download/v1.13.0/klint-1.13.0-linux-x64.tar.gz"
+    sha256 "b0f166339b6bb74b2cdec21062e8f236d3a0a039abc8af09455859ff433c5c26"
   end
 
   def install
